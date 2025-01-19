@@ -1,0 +1,33 @@
+# [language-server.angular]
+# command = "ngserver"
+# args = [
+#   "--stdio",
+#   "--tsProbeLocations",
+#   "$(npm root -g)/typescript/lib",
+#   "--ngProbeLocations",
+#   "$(npm root -g)/@angular/language-server/bin",
+#   ]
+
+[[language]]
+name ="html"
+roots = ["angular.json"]
+auto-format = true
+formatter = { command = "prettier" , args = ["--write", "--parser", "html"] }
+language-servers = ["angular","vscode-html-language-server"]
+
+
+[[language]]
+name = "typescript"
+roots = ["tsconfig.json"]
+auto-format = true
+formatter = { command = "prettier" , args = ["--write", "--parser", "typescript"] }
+# formatter = { command = 'npx', args = ["prettier", "--config", ".prettierrc", "--parser", "typescript"] }
+language-servers = ["typescript-language-server", "angular"]
+
+[[language]]
+name = "json"
+formatter = { command = "prettier" , args = ["--write", "--parser", "json"] }
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--write", "--parser", "css"] }

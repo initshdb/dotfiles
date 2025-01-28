@@ -1,4 +1,4 @@
-theme = "catppuccin_mocha"
+theme = "mytheme"
 
 [editor]
 color-modes = true
@@ -6,7 +6,7 @@ cursorline = true
 true-color = true
 rulers = [80]
 # end-of-line-diagnostics = "hint"
-line-number = "relative" 
+line-number = "relative"
 insert-final-newline = false
 # bufferline = "multiple"
 
@@ -34,7 +34,15 @@ mode.insert = "INSERT"
 mode.select = "SELECT"
 left = ["mode", "spinner", "version-control", "file-name"]
 # center = ["file-name"]
-right = ["diagnostics", "selections", "position-percentage", "position", "file-encoding", "file-line-ending", "file-type"]
+right = [
+  "diagnostics",
+  "selections",
+  "position-percentage",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+]
 
 [keys.insert]
 j = { f = "normal_mode" } # Maps `jk` to exit insert mode
@@ -42,14 +50,28 @@ j = { f = "normal_mode" } # Maps `jk` to exit insert mode
 [keys.normal]
 # A-x = "extend_to_line_bounds"
 X = "select_line_above"
-
+# C-p = "file_picker"
+# "C-f" = "file_picker_in_current_buffer_directory"
+# C = { S = { p = "command_palette" }}
+"?" = "command_palette"
+H = "goto_line_start"
+L = "goto_line_end"
+D = ["move_char_left", "delete_selection"]
+G = ["goto_last_line"]
+"A-r" = ":reload"
+"C-d" = ["half_page_down", "goto_window_center"]
+"C-u" = ["half_page_up", "goto_window_center"]
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
 
 [keys.select]
-# A-x = "extend_to_line_bounds"
-X = "select_line_above"
-# j = { f = "normal_mode" } # Maps `jk` to exit insert mode
+H = "goto_line_start"
+L = "goto_line_end"
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
 
 [keys.normal.space]
 "q" = ":buffer-close"
 "v" = ":reload-all"
 "i" = ":toggle-option lsp.display-inlay-hints"
+F = "file_picker_in_current_buffer_directory"

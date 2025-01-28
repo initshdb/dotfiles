@@ -1,0 +1,11 @@
+inherits = "catppuccin_mocha"
+
+"ui.cursor" = { fg = "base", bg = "secondary_cursor" }
+"ui.cursor.primary" = { fg = "base", bg = "rosewater" }
+"ui.cursor.match" = { fg = "peach", modifiers = ["bold"] }
+"ui.cursor.primary.normal" = { fg = "base", bg = "gold"}
+"ui.cursor.primary.insert" = { fg = "gold", bg = "gold" }
+"ui.cursor.primary.select" = { fg = "base", bg = "flamingo" }
+
+[palette]
+gold = "#ffc600"

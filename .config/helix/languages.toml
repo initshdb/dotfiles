@@ -9,25 +9,43 @@
 #   ]
 
 [[language]]
-name ="html"
+name = "html"
 roots = ["angular.json"]
 auto-format = true
-formatter = { command = "prettier" , args = ["--write", "--parser", "html"] }
-language-servers = ["angular","vscode-html-language-server"]
+formatter = { command = "prettier", args = ["--write", "--parser", "html"] }
+language-servers = ["angular", "vscode-html-language-server"]
 
 
 [[language]]
 name = "typescript"
 roots = ["tsconfig.json"]
 auto-format = true
-formatter = { command = "prettier" , args = ["--write", "--parser", "typescript"] }
+formatter = { command = "prettier", args = [
+  "--write",
+  "--parser",
+  "typescript",
+] }
 # formatter = { command = 'npx', args = ["prettier", "--config", ".prettierrc", "--parser", "typescript"] }
 language-servers = ["typescript-language-server", "angular"]
 
 [[language]]
 name = "json"
-formatter = { command = "prettier" , args = ["--write", "--parser", "json"] }
+formatter = { command = "prettier", args = ["--write", "--parser", "json"] }
 
 [[language]]
 name = "css"
 formatter = { command = 'prettier', args = ["--write", "--parser", "css"] }
+
+[[language]]
+name = "markdown"
+auto-format = true
+formatter = { command = "prettier", args = [
+  "--write",
+  "--parser",
+  "typescript",
+] }
+
+[[language]]
+name = "toml"
+auto-format = true
+formatter = { command = "taplo", args = ["fmt", "-"] }

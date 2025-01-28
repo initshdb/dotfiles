@@ -1,0 +1,21 @@
+[general]
+import = ["./themes/catppuccin-mocha.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+
+[font]
+normal = { family = "CaskaydiaCove Nerd Font Propo", style = "Regular" }
+size = 14
+
+[colors]
+cursor = { text = "#ffc600", cursor = "#ffc600" }
+
+[terminal]
+shell = { program = "/bin/bash", args = ["-l"] }

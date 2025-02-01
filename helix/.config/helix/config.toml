@@ -52,26 +52,52 @@ j = { f = "normal_mode" } # Maps `jk` to exit insert mode
 
 [keys.normal]
 # A-x = "extend_to_line_bounds"
-X = "select_line_above"
 # C-p = "file_picker"
 # "C-f" = "file_picker_in_current_buffer_directory"
 # C = { S = { p = "command_palette" }}
 "?" = "command_palette"
-H = "goto_line_start"
-L = "goto_line_end"
-D = ["move_char_left", "delete_selection"]
 G = ["goto_last_line"]
 "A-r" = ":reload"
 "C-d" = ["half_page_down", "goto_window_center"]
 "C-u" = ["half_page_up", "goto_window_center"]
 "}" = "goto_next_paragraph"
 "{" = "goto_prev_paragraph"
+t = ["extend_till_char", "normal_mode", "collapse_selection"]
+A-w = "move_next_sub_word_start"
+A-b = "move_prev_sub_word_start"
+A-e = "move_next_sub_word_end"
+V = ["select_mode", "extend_line_below", "extend_to_line_bounds"]
+A-v = ["select_mode", "select_line_above"]
+x = "delete_selection"
+X = "delete_char_backward"
+C = [
+  "extend_to_line_end",
+  "yank_main_selection_to_clipboard",
+  "delete_selection",
+  "insert_mode",
+]
+D = [
+  "extend_to_line_end",
+  "yank_main_selection_to_clipboard",
+  "delete_selection",
+]
+0 = "goto_line_start"
+L = "goto_line_end"
+"$" = "goto_line_end"
+H = "goto_first_nonwhitespace"
+"^" = "goto_first_nonwhitespace"
 
 [keys.select]
-H = "goto_line_start"
-L = "goto_line_end"
 "}" = "goto_next_paragraph"
 "{" = "goto_prev_paragraph"
+V = ["extend_line_below", "extend_to_line_bounds"]
+A-v = ["select_line_above"]
+0 = "goto_line_start"
+"$" = "goto_line_end"
+H = "goto_first_nonwhitespace"
+L = "goto_line_end"
+"^" = "goto_first_nonwhitespace"
+";" = "normal_mode"
 
 [keys.normal.space]
 "q" = ":buffer-close"

@@ -1,11 +1,26 @@
+# inherits = "tokyonight"
 inherits = "catppuccin_mocha"
 
-"ui.cursor" = { fg = "base", bg = "secondary_cursor" }
-"ui.cursor.primary" = { fg = "base", bg = "rosewater" }
-"ui.cursor.match" = { fg = "peach", modifiers = ["bold"] }
-"ui.cursor.primary.normal" = { fg = "base", bg = "gold"}
-"ui.cursor.primary.insert" = { fg = "gold", bg = "gold" }
-"ui.cursor.primary.select" = { fg = "base", bg = "flamingo" }
+# # "ui.cursor" = { fg = "base", bg = "secondary_cursor" }
+# # "ui.cursor.primary" = { fg = "base", bg = "rosewater" }
+# "ui.cursor.match" = { fg = "peach", modifiers = ["bold"] }
+# "ui.cursor" = { modifiers = ["reversed"] }
+"ui.cursor.primary.normal" = { fg = "base", bg = "gold" }
+"ui.cursor.primary.insert" = { bg = "gold" }
+"ui.cursor.primary.select" = { bg = "gold" }
+"ui.cursor.normal" = { fg = "base", bg = "gold-2" }
+
+# "ui.cursorline.primary" = { bg = "cool-grey" }
+
+# "ui.selection" = { bg = "blue-8" }
+# "ui.selection.primary" = { bg = "blue-7" }
 
 [palette]
 gold = "#ffc600"
+gold-2 = "#b38b00"       #cc9e00
+black = "#000000"
+cool-grey = "#4f505f"    #4f505f
+bg-selection = "#555769"
+blue-7 = "#0d419d"
+blue-8 = "#0c2d6b"
+base = "#1a1b26"
